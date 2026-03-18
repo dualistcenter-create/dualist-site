@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)https://dualist.w3spaces.com/saved-from-Tryit-2026-03-18.html -->
-<html lang="az"><script src="chrome-extension://pphgdbgldlmicfdkhondlafkiomnelnk/content/location/location.js" id="pphgdbgldlmicfdkhondlafkiomnelnk"></script><script src="chrome-extension://pphgdbgldlmicfdkhondlafkiomnelnk/libs/extend-native-history-api.js"></script><script src="chrome-extension://pphgdbgldlmicfdkhondlafkiomnelnk/libs/requests.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dualist Center | Tezliklə</title>
     <style>
@@ -9,6 +9,11 @@
             --gold: #c5a059;
             --dark: #0a0a0a;
             --light: #ffffff;
+            --gray: #bcbcbc;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
@@ -21,94 +26,106 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            text-align: center;
+            overflow-x: hidden;
         }
 
         .container {
             max-width: 800px;
-            padding: 40px 20px;
-            animation: fadeIn 1.2s ease-out;
+            padding: 40px 24px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
         }
 
         .logo-img {
             max-width: 280px;
             height: auto;
-            margin-bottom: 25px;
-            filter: drop-shadow(0 0 5px rgba(197, 160, 89, 0.2));
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.15));
         }
 
         .status-badge {
             display: inline-block;
-            padding: 6px 20px;
-            border: 1px solid rgba(197, 160, 89, 0.5);
+            padding: 8px 24px;
+            border: 1px solid rgba(197, 160, 89, 0.4);
             color: var(--gold);
-            border-radius: 2px;
-            font-size: 0.8rem;
-            margin-bottom: 45px;
+            border-radius: 1px;
+            font-size: 0.75rem;
+            margin-bottom: 50px;
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
             font-weight: 300;
         }
 
         h1 {
-            font-size: 1.5rem;
-            margin-bottom: 35px;
+            font-size: 1.6rem;
+            margin-bottom: 30px;
             font-weight: 400;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             color: #fff;
             line-height: 1.4;
+            text-transform: uppercase;
         }
 
         .content {
-            line-height: 1.9;
+            line-height: 2;
             font-size: 1.05rem;
-            color: #bcbcbc;
-            text-align: center; /* Mətni mərkəzə çəkdim ki, daha minimalist görünsün */
+            color: var(--gray);
         }
 
         .content p {
             margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        strong {
+            color: var(--light);
+            font-weight: 500;
         }
 
         .highlight {
             color: var(--gold);
-            font-weight: 500;
+            font-weight: 400;
             display: block;
-            margin-top: 35px;
+            margin-top: 40px;
             font-style: italic;
+            letter-spacing: 1px;
         }
 
         footer {
-            margin-top: 60px;
-            font-size: 0.8rem;
+            margin-top: 80px;
+            font-size: 0.75rem;
             letter-spacing: 2px;
-            border-top: 1px solid rgba(255,255,255,0.08);
-            padding-top: 25px;
-            color: #555;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 30px;
+            color: #444;
             text-transform: uppercase;
         }
 
+        /* Animations */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Mobile Optimization */
         @media (max-width: 600px) {
-            .logo-img { max-width: 200px; }
-            h1 { font-size: 1.2rem; }
-            .content { font-size: 0.95rem; }
+            .logo-img { max-width: 220px; }
+            h1 { font-size: 1.25rem; letter-spacing: 1px; }
+            .content { font-size: 0.95rem; line-height: 1.8; }
+            .status-badge { font-size: 0.65rem; letter-spacing: 3px; }
         }
     </style>
-<style type="text/css" id="operaUserStyle"></style><script bis_use="true" type="text/javascript" charset="utf-8" data-bis-config="[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.net/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,&quot;challenges.cloudflare.com/&quot;,&quot;ogs.google.com&quot;]" src="chrome-extension://pphgdbgldlmicfdkhondlafkiomnelnk/executors/traffic.js"></script></head>
-<body bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6InBwaGdkYmdsZGxtaWNmZGtob25kbGFma2lvbW5lbG5rIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJUSUtUT0siOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZGlzYWJsZWQiLCJDT05GSUciOiJkaXNhYmxlZCJ9LCJ2ZXJzaW9uIjoiMi4wLjM1Iiwic2NvcmUiOjIwMDM1fV0=" __processed_ba4ca16b-9e64-49be-bb93-2e5674099c04__="true">
+</head>
+<body>
 
-    <div class="container" bis_skin_checked="1">
-        <img src="./index_files/logo.svg" alt="Dualist Center" class="logo-img">
+    <main class="container">
+        <img src="logo.svg" alt="Dualist Center Logo" class="logo-img">
         
-        <br>
-        <div class="status-badge" bis_skin_checked="1">Sayt hazırlıq mərhələsindədir</div>
+        <div>
+            <span class="status-badge">Sayt hazırlıq mərhələsindədir</span>
+        </div>
 
-        <div class="content" bis_skin_checked="1">
+        <article class="content">
             <h1>DUALIST CENTER — qadınlar və kişilər üçün gözəllik məkanı</h1>
             
             <p><strong>Dualist Center</strong> — üslubun, peşəkarlığın və hər bir qonağa fərdi yanaşmanın harmonik şəkildə birləşdiyi müasir gözəllik salonudur.</p>
@@ -116,12 +133,12 @@
             <p>Salonumuz qadın və kişi xidmətlərini bir araya gətirərək geniş beauty xidmətləri təqdim edir: saç kəsimi və rəngləmədən tutmuş dəriyə qulluq, qaş dizaynı və dırnaq xidmətlərinə qədər.</p>
 
             <span class="highlight">Biz keyfiyyətə, atmosferə və sizə özünəinam bəxş edən nəticəyə dəyər veririk.</span>
-        </div>
+        </article>
 
         <footer>
-            © 2026 Dualist Center — Üslubun balans tapdığı yer.
+            &copy; 2026 Dualist Center — Üslubun balans tapdığı yer.
         </footer>
-    </div>
+    </main>
 
-
-<script charset="UTF-8" type="text/javascript">vkdId ='mhjbdafcpnoapkglmldoofhhbpnogehk';</script><script charset="UTF-8" type="text/javascript">extensionsURL = 'chrome-extension://mhjbdafcpnoapkglmldoofhhbpnogehk/';</script><script charset="UTF-8" type="text/javascript">vkd_settings =JSON.parse('{"showBitrate":"showHover"}')</script></body></html>
+</body>
+</html>
